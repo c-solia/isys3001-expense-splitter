@@ -11,14 +11,61 @@
   <form>
     <ul id="list1">
 
-      <!-- Brad input your code under here -->
+      <!-- Number of flatmates input -->
+      <li>
+        <label for="flatmates">Number of flatmates: </label>
+        <input type="number" id="flatmates" min="1"/>
+      </li>
+      <br>
 
+      <!-- Rent input -->
+      <li>
+        <label for="rent">Rent</label>
+        <input type="number" id="rent" value="0" min="0"/>
+      </li>
+      <br>
 
+      <!-- Electricity input -->
+      <li>
+        <label for="electricity">Electricity</label>
+        <input type="number" id="electricity" value="0" min="0"/>
+      </li>
+      <br>
 
-      <!-- Renz input your code under here -->
+      <!-- Water input -->
+      <li>
+        <label for="water">Water</label>
+        <input type="number" id="water" value="0" min="0"/>
+      </li>
+      <br>
 
+      <!-- Internet input -->
+      </li>
+        <label for="internet">Internet</label>
+        <input type="number" id="internet" value="0" min="0"/>
+      </li>
+      <br>
 
+      <!-- Cleaning input -->
+      </li>
+        <label for="cleaning">Cleaning</label>
+        <input type="number" id="cleaning" value="0" min="0"/>
+      </li>
+      <br>
 
+      <!-- Food input -->
+      <li>
+        <label for="food">Food</label>
+        <input type="number" id="food" value="0" min="0"/>
+      </li>
+      <br>
+
+      <!-- Supplies input -->
+      <li>
+        <label for="supplies">Supplies</label>
+        <input type="number" id="supplies" value="0" min="0"/>
+      </li>
+      <br>
       
       <!-- Miscellaneous expenses input -->
       <li>
@@ -32,9 +79,12 @@
         <input type="button" id="submit" value="Calculate" onclick="calculate()"/>
       </li>
       <br>
-
     </ul>
   </form>
+
+  <!-- Text for an error message or caluclation result -->
+  <p id="msg"></p>
+  <p id="result"></p>
 
   <!-- Runs the JavaScript -->
   <script src="script.js"></script>
