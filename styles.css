@@ -1,3 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+#list1 {
+    list-style-type: none;
+}
+
 .row {
     display: flex;
 }
@@ -10,40 +18,85 @@
     display: flex;
     justify-content: center;
     flex: 80%;
-}.row {
-    display: flex;
 }
 
-.column-side {
-    flex: 10%;
+.styledinput {
+    width: 100%;
+    padding: 5px 25px;
+    margin: 3px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
-.column-mid {
+label {
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
     display: flex;
+    flex-direction: column;
+    color: #0a5fc0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex: 80%;
+    height: 100px;
+    background-color: #0a5fc0;
 }
+
+h1 {
+    color: #d9eefb;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: #d9eefb;
+}
+
+p {
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a5fc0;
+}
+
+#submit, #clear, #instructions {
+    display: inline-block;
+    outline: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 13px 23px;
+    border: 1px solid #222222;
+    background-color: #065282;
+    color: #d9eefb;
+}
+
+    #submit:hover, #clear:hover, #instructions:hover {
+        background-color: #429aff;
+    }
 
 /**====================Overlay code originated at w3schools.com and then modified START==================== */
 
 /* Help button overlay */
 #overlay {
-    position: fixed;
-    /* Sit over page content */
-    display: none;
-    /* Hidden */
-    width: 100%;
-    /* Full width  */
-    height: 100%;
-    /* Full height  */
+    position: fixed; /* Sit over page content */
+    display: none; /* Hidden */
+    width: 100%; /* Full width  */
+    height: 100%; /* Full height  */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 2;
-    cursor: pointer;
-    /* Adds pointer */
+    cursor: pointer; /* Adds pointer */
 }
 
 /* Overlay text styling */
@@ -54,8 +107,8 @@
     text-align: center;
     font-size: 50px;
     color: rgb(120, 0, 0);
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
 
 /**====================Overlay code originated at w3schools.com and then modified END==================== */
