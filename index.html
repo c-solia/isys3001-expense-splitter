@@ -9,8 +9,14 @@
 
 <body>
 
-  <h1 id="title">Flatmate Expense Splitter</h1>
+  <div id="header">
+    <h1 id="title">Flatmate Expense Splitter</h1>
+  </div>
 
+  <div class="row">
+    <div class="column-side"></div>
+    <div class="column-mid">
+      
   <form id="myform">
     <ul id="list1">
 
@@ -83,13 +89,20 @@
         <input type="button" id="clear" value="Clear" onclick="clearTextBoxes()" />
         <input type="button" id="instructions" value="Help" onclick="showInstructions()" />
       </li>
+      
+      <li>
+        <p id="msg"></p>
+        <p id="result"></p>
+      </li>
+
       <br>
     </ul>
   </form>
 
-  <!-- Text for an error message or caluclation result -->
-  <p id="msg"></p>
-  <p id="result"></p>
+  </div>
+  <div class="column-side"></div>
+  </div>
+
 
   <div id="overlay" onclick="hideInstructions()"></div>
   <div id="overlayText">
