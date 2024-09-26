@@ -64,4 +64,6 @@ function hideInstructions() {
 
 function clearTextBoxes() {
     document.getElementById("myform").reset();
+    document.getElementById("msg").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
 }
