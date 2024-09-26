@@ -61,3 +61,7 @@ function showInstructions() {
 function hideInstructions() {
     document.getElementById("overlay").style.display = "none";
 }
+
+function clearTextBoxes() {
+    document.getElementById("myform").reset();
+}

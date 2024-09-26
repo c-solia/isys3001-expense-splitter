@@ -1,3 +1,29 @@
+.row {
+    display: flex;
+}
+
+.column-side {
+    flex: 10%;
+}
+
+.column-mid {
+    display: flex;
+    justify-content: center;
+    flex: 80%;
+}.row {
+    display: flex;
+}
+
+.column-side {
+    flex: 10%;
+}
+
+.column-mid {
+    display: flex;
+    justify-content: center;
+    flex: 80%;
+}
+
 /**====================Overlay code originated at w3schools.com and then modified START==================== */
 
 /* Help button overlay */
