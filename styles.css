@@ -1,0 +1,35 @@
+/**====================Overlay code originated at w3schools.com and then modified START==================== */
+
+/* Help button overlay */
+#overlay {
+    position: fixed;
+    /* Sit over page content */
+    display: none;
+    /* Hidden */
+    width: 100%;
+    /* Full width  */
+    height: 100%;
+    /* Full height  */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    cursor: pointer;
+    /* Adds pointer */
+}
+
+/* Overlay text styling */
+#overlayText {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(120, 0, 0);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/**====================Overlay code originated at w3schools.com and then modified END==================== */

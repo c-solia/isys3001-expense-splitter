@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Connects the CSS stylesheet -->
-    <link rel="stylesheet" href="/styles.css">
+  <!-- Connects the CSS stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
 
   <h1 id="title">Flatmate Expense Splitter</h1>
 
-  <form>
+  <form id="myform">
     <ul id="list1">
 
       <!-- Number of flatmates input -->
       <li>
         <label for="flatmates">Number of flatmates: </label>
-        <input type="number" id="flatmates" min="1"/>
+        <input type="number" id="flatmates" min="1" />
       </li>
       <br>
 
       <!-- Rent input -->
       <li>
         <label for="rent">Rent</label>
-        <input type="number" id="rent" value="0" min="0"/>
+        <input type="number" id="rent" value="0" min="0" />
       </li>
       <br>
 
       <!-- Electricity input -->
       <li>
         <label for="electricity">Electricity</label>
-        <input type="number" id="electricity" value="0" min="0"/>
+        <input type="number" id="electricity" value="0" min="0" />
       </li>
       <br>
 
       <!-- Water input -->
       <li>
         <label for="water">Water</label>
-        <input type="number" id="water" value="0" min="0"/>
+        <input type="number" id="water" value="0" min="0" />
       </li>
       <br>
 
       <!-- Internet input -->
       </li>
-        <label for="internet">Internet</label>
-        <input type="number" id="internet" value="0" min="0"/>
+      <label for="internet">Internet</label>
+      <input type="number" id="internet" value="0" min="0" />
       </li>
       <br>
 
       <!-- Cleaning input -->
       </li>
-        <label for="cleaning">Cleaning</label>
-        <input type="number" id="cleaning" value="0" min="0"/>
+      <label for="cleaning">Cleaning</label>
+      <input type="number" id="cleaning" value="0" min="0" />
       </li>
       <br>
 
       <!-- Food input -->
       <li>
         <label for="food">Food</label>
-        <input type="number" id="food" value="0" min="0"/>
+        <input type="number" id="food" value="0" min="0" />
       </li>
       <br>
 
       <!-- Supplies input -->
       <li>
         <label for="supplies">Supplies</label>
-        <input type="number" id="supplies" value="0" min="0"/>
+        <input type="number" id="supplies" value="0" min="0" />
       </li>
       <br>
-      
+
       <!-- Miscellaneous expenses input -->
       <li>
         <label for="other">Other</label>
-        <input type="number" id="other" value="0" min="0"/>
+        <input type="number" id="other" value="0" min="0" />
       </li>
       <br>
 
       <!-- Calculate button -->
       <li>
-        <input type="button" id="submit" value="Calculate" onclick="calculate()"/>
+        <input type="button" id="submit" value="Calculate" onclick="validate()" />
+
+        <input type="button" id="instructions" value="Help" onclick="showInstructions()" />
       </li>
       <br>
     </ul>
@@ -86,7 +90,21 @@
   <p id="msg"></p>
   <p id="result"></p>
 
+  <div id="overlay" onclick="hideInstructions()"></div>
+  <div id="overlayText">
+    <p>INSTRUCTIONS</p>
+    <br>
+    <p>Please enter the number of flatmates sharing expenses.</p>
+    <p>Then enter your expenses into an appropriate field</p>
+    <p>When all expenses have been entered</p>
+    <p>Select CALCULATE</p>
+    <br>
+    <p>Select CLEAR to reset all fields</p>
+  </div>
+  </div>
+
   <!-- Runs the JavaScript -->
   <script src="script.js"></script>
 </body>
+
 </html>
