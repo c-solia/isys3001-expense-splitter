@@ -1,124 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <!-- Add responsiveness -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Connects the CSS stylesheet -->
-  <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js"></script>
 </head>
 
 <body>
+    <div id="header">
+        <h1 id="title">Flatmate Expense Splitter</h1>
+    </div>
 
-  <div id="header">
-    <h1 id="title">Flatmate Expense Splitter</h1>
-  </div>
+    <div class="row">
+        <div class="column-side"></div>
+        <div class="column-mid">
 
-  <div class="row">
-    <div class="column-side"></div>
-    <div class="column-mid">
-      
-  <form id="myform">
-    <ul id="list1">
+            <form id="myform">
+                <ul id="list1">
+                    <li>
+                        <label for="flatmates">Number of flatmates: </label>
+                        <input type="number" class="styledinput" id="flatmates" min="1" />
+                    </li>
+                    <br>
 
-      <!-- Number of flatmates input -->
-      <li>
-        <label for="flatmates">Number of flatmates: </label>
-        <input type="number" id="flatmates" min="1" />
-      </li>
-      <br>
+                    <li>
+                        <label for="rent">Rent</label>
+                        <input type="number" class="styledinput" id="rent" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Rent input -->
-      <li>
-        <label for="rent">Rent</label>
-        <input type="number" id="rent" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="electricity">Electricity</label>
+                        <input type="number" class="styledinput" id="electricity" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Electricity input -->
-      <li>
-        <label for="electricity">Electricity</label>
-        <input type="number" id="electricity" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="water">Water</label>
+                        <input type="number" class="styledinput" id="water" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Water input -->
-      <li>
-        <label for="water">Water</label>
-        <input type="number" id="water" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="internet">Internet</label>
+                        <input type="number" class="styledinput" id="internet" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Internet input -->
-      </li>
-      <label for="internet">Internet</label>
-      <input type="number" id="internet" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="cleaning">Cleaning</label>
+                        <input type="number" class="styledinput" id="cleaning" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Cleaning input -->
-      </li>
-      <label for="cleaning">Cleaning</label>
-      <input type="number" id="cleaning" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="food">Food</label>
+                        <input type="number" class="styledinput" id="food" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Food input -->
-      <li>
-        <label for="food">Food</label>
-        <input type="number" id="food" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="supplies">Supplies</label>
+                        <input type="number" class="styledinput" id="supplies" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Supplies input -->
-      <li>
-        <label for="supplies">Supplies</label>
-        <input type="number" id="supplies" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <label for="other">Other</label>
+                        <input type="number" class="styledinput" id="other" value="0" min="0" />
+                    </li>
+                    <br>
 
-      <!-- Miscellaneous expenses input -->
-      <li>
-        <label for="other">Other</label>
-        <input type="number" id="other" value="0" min="0" />
-      </li>
-      <br>
+                    <li>
+                        <input type="button" id="submit" value="Calculate" onclick="validate()" />
+                        <input type="button" id="clear" value="Clear" onclick="clearTextBoxes()" />
+                        <input type="button" id="instructions" value="Help" onclick="showInstructions()" />
+                    </li>
 
-      <!-- Calculate button -->
-      <li>
-        <input type="button" id="submit" value="Calculate" onclick="validate()" />
-        <input type="button" id="clear" value="Clear" onclick="clearTextBoxes()" />
-        <input type="button" id="instructions" value="Help" onclick="showInstructions()" />
-      </li>
-      
-      <li>
-        <p id="msg"></p>
-        <p id="result"></p>
-      </li>
+                    <li>
+                        <p id="msg"></p>
+                        <p id="result"></p>
+                    </li>
+                    <br>
+                </ul>
+            </form>
+        </div>
+        <div class="column-side"></div>
+    </div>
 
-      <br>
-    </ul>
-  </form>
+    <div id="overlay" onclick="hideInstructions()">
+        <div id="overlayText">
+            <p>INSTRUCTIONS</p>
+            <br>
+            <p>Please enter the number of flatmates sharing expenses.</p>
+            <p>Then enter your expenses into an appropriate field</p>
+            <p>When all expenses have been entered</p>
+            <p>Select CALCULATE</p>
+            <br>
+            <p>Select CLEAR to reset all fields</p>
+        </div>
+    </div>
 
-  </div>
-  <div class="column-side"></div>
-  </div>
-
-
-  <div id="overlay" onclick="hideInstructions()"></div>
-  <div id="overlayText">
-    <p>INSTRUCTIONS</p>
-    <br>
-    <p>Please enter the number of flatmates sharing expenses.</p>
-    <p>Then enter your expenses into an appropriate field</p>
-    <p>When all expenses have been entered</p>
-    <p>Select CALCULATE</p>
-    <br>
-    <p>Select CLEAR to reset all fields</p>
-  </div>
-  </div>
-
-  <!-- Runs the JavaScript -->
-  <script src="script.js"></script>
 </body>
 
 </html>
