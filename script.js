@@ -43,13 +43,21 @@ function calculate() {
     let food = Number(document.getElementById('food').value);
     let supplies = Number(document.getElementById('supplies').value);
     let other = Number(document.getElementById('other').value);
-    
+
     let costs = rent + electricity + water + internet + cleaning + food + supplies + other;
     console.log("Total Costs = $" + costs);
 
-    let costshare = costs/flatmates;
+    let costshare = costs / flatmates;
     console.log("Costshare = $" + costshare);
 
     document.getElementById("msg").innerHTML = "Each person pays:";
     document.getElementById("result").innerHTML = "$" + costshare.toFixed(2);
+}
+
+function showInstructions() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function hideInstructions() {
+    document.getElementById("overlay").style.display = "none";
 }
