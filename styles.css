@@ -34,6 +34,7 @@ label {
     font-weight: 600;
     display: flex;
     flex-direction: column;
+    color: #0a5fc0;
 }
 
 #header {
@@ -41,9 +42,12 @@ label {
     align-items: center;
     justify-content: center;
     height: 100px;
+    background-color: #0a5fc0;
 }
 
-
+h1 {
+    color: #d9eefb;
+}
 
 html {
     height: 100%;
@@ -51,12 +55,14 @@ html {
 
 body {
     min-height: 100%;
+    background-color: #d9eefb;
 }
 
 p {
     font-family: Tahoma, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    color: #0a5fc0;
 }
 
 #submit, #clear, #instructions {
@@ -68,9 +74,13 @@ p {
     border-radius: 8px;
     padding: 13px 23px;
     border: 1px solid #222222;
+    background-color: #065282;
+    color: #d9eefb;
 }
 
-
+    #submit:hover, #clear:hover, #instructions:hover {
+        background-color: #429aff;
+    }
 
 /**====================Overlay code originated at w3schools.com and then modified START==================== */
 
