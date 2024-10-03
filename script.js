@@ -22,6 +22,12 @@ function validate() {
         validEntries = false
     }
 
+    if (rent > 1000000 || electricity > 1000000 || water > 1000000 || internet > 1000000 ||
+        cleaning > 1000000 || food > 1000000 || supplies > 1000000 || other > 1000000) {
+        alert("Fields have a maximum value of 1 000 000");
+        validEntries = false
+    }
+
     if (isNaN(rent) || isNaN(electricity) || isNaN(water) || isNaN(internet) ||
         isNaN(cleaning) || isNaN(food) || isNaN(supplies) || isNaN(other)) {
         alert("Fields can only contain numbers, please ensure no letters or special characters have been entered");
